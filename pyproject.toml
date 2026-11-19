@@ -1,0 +1,25 @@
+[project]
+name = "treza"
+version = "0.1.0"
+description = "Generate AI pictures and videos and run Treza pipelines from a graph. Each render is priced first, with an optional Max cost. Needs a Treza account and API key."
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = ["requests"]
+classifiers = [
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/treza-labs/treza-comfyui"
+Documentation = "https://www.trezalabs.com/integrations/comfyui"
+"Bug Tracker" = "https://github.com/treza-labs/treza-comfyui/issues"
+
+[tool.comfy]
+PublisherId = "treza-labs"
+DisplayName = "Treza"
+Icon = "https://raw.githubusercontent.com/treza-labs/treza-comfyui/main/assets/icon.png"
+requires-comfyui = ">=0.3.45"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--import-mode=importlib"
