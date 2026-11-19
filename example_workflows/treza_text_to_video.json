@@ -1,4 +1,6 @@
 {
+  "id": "42901b74-1e94-4fdf-b965-1511ee3c4593",
+  "revision": 0,
   "last_node_id": 3,
   "last_link_id": 1,
   "nodes": [
@@ -18,42 +20,124 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "first_frame",
           "name": "first_frame",
+          "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "last_frame",
           "name": "last_frame",
+          "shape": 7,
           "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "shape",
+          "name": "shape",
+          "type": "COMBO",
+          "widget": {
+            "name": "shape"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seconds",
+          "name": "seconds",
+          "type": "INT",
+          "widget": {
+            "name": "seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "with_audio",
+          "name": "with_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "with_audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_cost_usd",
+          "name": "max_cost_usd",
+          "type": "FLOAT",
+          "widget": {
+            "name": "max_cost_usd"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "model",
+          "name": "model",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "wait_minutes",
+          "name": "wait_minutes",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "wait_minutes"
+          },
           "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "video",
           "name": "video",
           "type": "VIDEO",
+          "slot_index": 0,
           "links": [
             1
-          ],
-          "slot_index": 0
+          ]
         },
         {
+          "localized_name": "url",
           "name": "url",
           "type": "STRING",
-          "links": [],
-          "slot_index": 1
+          "slot_index": 1,
+          "links": []
         },
         {
+          "localized_name": "price_usd",
           "name": "price_usd",
           "type": "FLOAT",
-          "links": [],
-          "slot_index": 2
+          "slot_index": 2,
+          "links": []
         },
         {
+          "localized_name": "model",
           "name": "model",
           "type": "STRING",
-          "links": [],
-          "slot_index": 3
+          "slot_index": 3,
+          "links": []
         }
       ],
       "properties": {
@@ -64,12 +148,23 @@
         "16:9",
         4,
         true,
-        1.0,
+        1,
         1,
         "fixed",
         "",
         15
-      ]
+      ],
+      "widgets_values_named": {
+        "prompt": "A red fox trots through fresh snow toward the camera, breath steaming, soft morning light, shallow depth of field",
+        "shape": "16:9",
+        "seconds": 4,
+        "with_audio": true,
+        "max_cost_usd": 1,
+        "seed": 1,
+        "control_after_generate": "fixed",
+        "model": "",
+        "wait_minutes": 15
+      }
     },
     {
       "id": 2,
@@ -83,25 +178,76 @@
         420
       ],
       "flags": {},
-      "order": 1,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "video",
           "name": "video",
           "type": "VIDEO",
           "link": 1
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "codec",
+          "name": "format.codec",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "format.codec"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "codec",
+          "name": "codec",
+          "shape": 7,
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "codec"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "video",
           "name": "video",
           "type": "VIDEO",
-          "links": [],
-          "slot_index": 0
+          "slot_index": 0,
+          "links": []
         }
       ],
       "properties": {
         "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
       }
     },
     {
@@ -116,7 +262,7 @@
         150
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -124,6 +270,9 @@
       "widgets_values": [
         "Needs a Treza API key: set TREZA_API_KEY before starting ComfyUI, or save the key in user/treza_api_key.txt.\nmax_cost_usd is the most the render may cost (0 = no limit). Change seed to render again.\nA 4 second clip on Treza's default model costs about $0.28."
       ],
+      "widgets_values_named": {
+        "text": "Needs a Treza API key: set TREZA_API_KEY before starting ComfyUI, or save the key in user/treza_api_key.txt.\nmax_cost_usd is the most the render may cost (0 = no limit). Change seed to render again.\nA 4 second clip on Treza's default model costs about $0.28."
+      },
       "color": "#432",
       "bgcolor": "#653"
     }
@@ -140,6 +289,14 @@
   ],
   "groups": [],
   "config": {},
-  "extra": {},
+  "extra": {
+    "ds": {
+      "scale": 0.816044776119403,
+      "offset": [
+        126.60722450845913,
+        131.66666666666669
+      ]
+    }
+  },
   "version": 0.4
 }

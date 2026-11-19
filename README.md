@@ -37,6 +37,10 @@ Restart ComfyUI. It needs ComfyUI 0.3.45 or newer.
 
 The key is never a node setting, so it is not saved into workflows you share.
 
+## Example workflows
+
+Three templates ship with the pack and show under **Templates > treza** in ComfyUI: text to image, text to video, and image to video (a picture becomes the clip's first frame).
+
 ## Good to know
 
 - **Price limit.** `max_cost_usd` is the most a render may cost. Treza prices the render first and the node stops, with nothing spent, when the price is higher. `0` means no limit: the render runs at Treza's price as long as your balance covers it.
