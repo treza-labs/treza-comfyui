@@ -2,6 +2,12 @@
 
 Generate AI pictures and videos from a ComfyUI graph with [Treza](https://www.trezalabs.com), and run your own Treza pipelines. The renders happen on Treza's servers, so they need no GPU or model downloads on your machine. Treza prices every render first. Set **max_cost_usd** and, if the price is higher, the node stops and nothing is spent.
 
+## What Treza makes
+
+![Four short clips made with Treza: a red hover car racing through a neon city, an astronaut walking over a Martian dune at sunset, an orchid mantis on a leaf, and espresso pouring into a cup](https://raw.githubusercontent.com/treza-labs/treza-labs/main/assets/treza-demo.gif)
+
+These clips were made with [Treza](https://www.trezalabs.com), and the [ComfyUI integration page](https://www.trezalabs.com/integrations/comfyui) shows how to set up these nodes.
+
 ## Nodes
 
 All nodes are under **Treza** in the node menu.
