@@ -1,6 +1,6 @@
 [project]
 name = "treza"
-version = "0.1.0"
+version = "0.1.1"
 description = "Generate AI pictures and videos and run Treza pipelines from a graph. Each render is priced first, with an optional Max cost. Needs a Treza account and API key."
 license = { file = "LICENSE" }
 requires-python = ">=3.10"

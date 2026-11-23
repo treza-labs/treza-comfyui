@@ -7,7 +7,6 @@ then wait for the finished file.
 
 from __future__ import annotations
 
-import os
 import time
 import uuid
 from typing import Any, Callable
@@ -24,9 +23,12 @@ STALE_QUOTE_CODES = {"STALE_QUOTE", "QUOTE_MISMATCH", "UNKNOWN_QUOTE"}
 Data = dict[str, Any]
 
 
+API_URL = "https://www.trezalabs.com"
+"""Treza's API. Fixed: the key only ever goes to Treza (tests patch this constant)."""
+
+
 def base_url() -> str:
-    """Treza's API. Tests point it at a mock with TREZA_BASE_URL."""
-    return (os.environ.get("TREZA_BASE_URL") or "https://www.trezalabs.com").rstrip("/")
+    return API_URL
 
 
 class TrezaError(Exception):
