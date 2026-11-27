@@ -24,14 +24,16 @@ Render nodes also return the file's `url`, the `price_usd` Treza charged and the
 
 ## Install
 
-In ComfyUI-Manager, search for **Treza** and install it. Or by hand:
+Clone the pack into ComfyUI's `custom_nodes` folder:
 
 ```bash
 cd ComfyUI/custom_nodes
 git clone https://github.com/treza-labs/treza-comfyui treza
 ```
 
-Restart ComfyUI. It needs ComfyUI 0.3.45 or newer.
+Restart ComfyUI. It needs ComfyUI 0.3.45 or newer. To update, run `git pull` in `custom_nodes/treza`.
+
+ComfyUI-Manager and comfy-cli can't install it yet: the Comfy Registry is holding versions 0.1.0 and 0.1.1 for review. Once the Registry lists them again, searching for **Treza** in ComfyUI-Manager will install it too.
 
 ## Connect your Treza account
 
